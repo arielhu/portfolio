@@ -652,7 +652,7 @@ i.icon-remove:hover {
 /* =Footer
 -------------------------------------------------------------- */
 
-footer { width: 100%; background: #060606;}
+footer { width: 100%; background: ghostwhite;}
 .contact { text-align: center; }
 
 .contact ::selection {
@@ -669,7 +669,7 @@ footer { width: 100%; background: #060606;}
 
 .contact li:nth-child(1) {
 	font-size: 0.9333333333333em; 
-	opacity: .5;
+	opacity: 0.7;
     filter: alpha(opacity=50); 
 }
 
@@ -678,7 +678,7 @@ footer { width: 100%; background: #060606;}
 	font-size: 0.9333333333333em;
 	font-weight: 300;
 	margin-bottom: 20px;
-	opacity: .5;
+	opacity: .7;
     filter: alpha(opacity=50); 
 }
 
