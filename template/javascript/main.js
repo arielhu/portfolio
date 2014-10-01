@@ -278,11 +278,7 @@ function initializeVisia() {
 	});
 
 	//FULLSCREEN VIDEO
-	jQuery(function() {
-	    var BV = new jQuery.BigVideo({useFlashForFirefox:false});
-	    BV.init();
-	    BV.show('video/visia-video.mp4',{altSource:'video/visia-video.ogv', ambient:true});
-	});
+
 };
 
 function initializePortfolio() {
