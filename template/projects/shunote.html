@@ -20,10 +20,10 @@
 		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
 
-	<!-- Retina Images -->
+	<!-- Retina ../images -->
 	<script>if((window.devicePixelRatio===undefined?1:window.devicePixelRatio)>1)
 		document.cookie='HTTP_IS_RETINA=1;path=/';</script>
-	<!-- End Retina Images -->
+	<!-- End Retina ../images -->
 
 	<!-- jQuery -->
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
@@ -31,7 +31,7 @@
 	<!-- Fonts -->
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
 
-	<!-- Stylesheets -->
+	<!-- ../stylesheets -->
 	<link rel="stylesheet" type="text/css" href="../stylesheets/reset.css">
 	<link rel="stylesheet" type="text/css" href="../stylesheets/grid.css">
 	<link rel="stylesheet" type="text/css" href="../stylesheets/style.css">
@@ -50,7 +50,7 @@
 	<link rel="stylesheet" type="text/css" href="../stylesheets/animations.css">
 
 	<!--[if lt IE 9]>
-		<link rel="stylesheet" type="text/css" href="stylesheets/ie.css" />
+		<link rel="stylesheet" type="text/css" href="../stylesheets/ie.css" />
 	<![endif]-->
 
 </head>
@@ -62,7 +62,7 @@
 
 		<!-- Logo -->
 		<div class="logo">
-			<a href="../index.html"><img src="../images/logo.png" width="91" height="30" alt="Visia"></a>
+			<a href="index.html"><img src="../images/logo.png" width="91" height="30" alt="Visia"></a>
 		</div>
 
 		<!-- Mobile Nav Button -->
@@ -94,17 +94,19 @@
 			<!-- Slider -->
 			<ul class="slider clearfix">
 				<li>
-					<img src="images/projects/shunote1.png" alt="">
+					<img src="../images/projects/shunote1.png" alt="">
 				</li>
 				<li>
-					<img src="images/projects/shunote2.png" alt="">
+					<img src="../images/projects/shunote2.png" alt="">
 				</li>
 				<li>
-					<img src="images/projects/shunote3.png" alt="">
+					<img src="../images/projects/shunote3.png" alt="">
 				</li>
 				<li>
-					<img src="" alt="">
-				</li>
+                    <a href="shunote4.pdf">
+                        <img src="../images/slider/slide1.jpg" alt="" >
+                    </a>
+                </li>
 			</ul>
 
 			<!-- Pager -->
@@ -125,15 +127,16 @@
 		<div class="project-info clearfix">
 			<div class="grid-2">
 				<h6>Description</h6>
-				<p>Shunote.com is my first trial for my entrepreneurship dream. Together with my friend and then coworker Zhihao Deng and other partnerts, we tried to build a web application that can better help better manage information that are more logically structured, such as text books. The project met all of its initial goals half a year before the deadline, received the rewards and funds natioanl undersgraduate training program.</p>
+				<p>Shunote.com is my first trial for my entrepreneurship dream. Together with my friend and then coworker Zhihao Deng and other partners, we tried to build a web application that could better help manage any knowledge. The project met all of its initial goals half a year before the deadline, received rewards and funds nationally for an undergraduate training program.</p>
 			</div>
 			<div class="grid-2">
 				<h6>My Contribution</h6>
-				<p>As a student from College of Information Management, I worked for tentative ideas and theorotical structures for the product, exploring the best organization and display method for users to manage their logical information.   </p>
+				<p>As a student from College of Information Management, I was tasked with creating the ideas and theoretical structure for the product.  While also, exploring the best organization and display method for users to manage their information.   </p>
 			</div>
 			<div class="grid-2">
 				<h6>Reflection</h6>
-				<p>Unfortunately Shunote.com didn't get to continue after everyone in the team graduated and seprated, but it's a great practice combining academic knowledge together with market needs, it's also the first time I got to embrace entrepreneur spirit. </p>
+				<p>Unfortunately Shunote.com didn't persist after everyone in the team graduated and moved on to other projects, but it was great practice combining academic knowledge together with market needs.  It's was also my first foray into the entrepreneurial spirit. </p>
+				<a href="../images/projects/certificate.pdf">The certificate →</a>
 
 			</div>
 		</div>
@@ -177,7 +180,7 @@
 				</div>
 			</div>
 
-			<form method="post" action="../post.php" name="contactform" id="contactform" class="container">
+			<form method="post" action="post.php" name="contactform" id="contactform" class="container">
 				<fieldset>
 					<div class="form-field grid-half">
 						<label for="name"><h6>Name</h6></label>
@@ -254,7 +257,7 @@
 	<script src="../javascript/jquery.appear.js" type="text/javascript" charset="utf-8"></script>
 	<script src="../javascript/jquery.bxslider.js" type="text/javascript" charset="utf-8"></script>
 	<script src="../javascript/jquery.fitvids.js" type="text/javascript" charset="utf-8"></script>
-	<script src="../javascript/main.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../javascript/main.js" type="text" charset="utf-8"></script>
 	<script type="text/javascript">
 		jQuery('.slider').bxSlider({
 			mode: 'horizontal',
