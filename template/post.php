@@ -1,5 +1,7 @@
 <?php
 
+require_once "Mail.php";
+
 if(!$_POST) exit;
 
 // Email address verification, do not edit.
@@ -9,8 +11,8 @@ function isEmail($email) {
 
 if (!defined("PHP_EOL")) define("PHP_EOL", "\r\n");
 
-$name     = $_POST['name'];
-$email    = $_POST['email'];
+$name    = $_POST['name'];
+$email   = $_POST['email'];
 $message = $_POST['message'];
 
 if(trim($name) == '') {
@@ -38,8 +40,9 @@ if(get_magic_quotes_gpc()) {
 // Enter the email address that you want to emails to be sent to.
 // Example $address = "joe.doe@yourdomain.com";
 
-$address = "hutianyu@msu.edu";
-
+//$address = "hutianyu@msu.edu";
+$from = "Sender <postmaster@hutianyu.net>";
+$to = "Recipient <lanjak11@gmail.com>";
 
 // Configuration option.
 // i.e. The standard subject will appear as, "You've been contacted by John Doe."
@@ -59,12 +62,30 @@ $e_reply = "You can contact $name via email, $email";
 
 $msg = wordwrap( $e_body . $e_content . $e_reply, 70 );
 
-$headers = "From: $email" . PHP_EOL;
-$headers .= "Reply-To: $email" . PHP_EOL;
-$headers .= "MIME-Version: 1.0" . PHP_EOL;
-$headers .= "Content-type: text/plain; charset=utf-8" . PHP_EOL;
-$headers .= "Content-Transfer-Encoding: quoted-printable" . PHP_EOL;
+//$headers = "From: $email" . PHP_EOL;
+//$headers .= "Reply-To: $email" . PHP_EOL;
+//$headers .= "MIME-Version: 1.0" . PHP_EOL;
+//$headers .= "Content-type: text/plain; charset=utf-8" . PHP_EOL;
+//$headers .= "Content-Transfer-Encoding: quoted-printable" . PHP_EOL;
 
+$host = "mail.hutianyu.net";
+$username = "admin@hutianyu.net";
+$password = "";
+$headers = array('From'    => $from,
+				 'To'      => $to,
+				 'Subject' => $e_subject);
+
+$smtp = Mail::factory('smtp',
+					  array(
+						'host'     => $host,
+						'port'     => 587,
+						'auth'     => true,
+						'username' => $username,
+						'password' => $password));
+
+$mail = $smtp->send($to, $headers, $msg);
+echo $mail;
+/*
 if(mail($address, $e_subject, $msg, $headers)) {
 
 	// Email has sent successfully, echo a success page.
@@ -79,4 +100,4 @@ if(mail($address, $e_subject, $msg, $headers)) {
 
 	echo 'ERROR!';
 
-}
+}*/
