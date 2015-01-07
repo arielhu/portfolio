@@ -42,7 +42,7 @@ if(get_magic_quotes_gpc()) {
 
 //$address = "hutianyu@msu.edu";
 $from = "Sender <postmaster@hutianyu.net>";
-$to = "Recipient <lanjak11@gmail.com>";
+$to = "hutianyu@msu.edu";
 
 // Configuration option.
 // i.e. The standard subject will appear as, "You've been contacted by John Doe."
@@ -71,28 +71,26 @@ $msg = wordwrap( $e_body . $e_content . $e_reply, 70 );
 $host = "mail.hutianyu.net";
 $username = "admin@hutianyu.net";
 $password = "";
-$headers = array('From'    => $from,
+$headers = array('From'    => $username,
 				 'To'      => $to,
 				 'Subject' => $e_subject);
 
 $smtp = Mail::factory('smtp',
 					  array(
 						'host'     => $host,
-						'port'     => 587,
 						'auth'     => true,
 						'username' => $username,
 						'password' => $password));
 
 $mail = $smtp->send($to, $headers, $msg);
-echo $mail;
-/*
-if(mail($address, $e_subject, $msg, $headers)) {
+
+if($mail == 1) {
 
 	// Email has sent successfully, echo a success page.
 
 	echo "<fieldset>";
 	echo "<div id='success_page'>";
-	echo "<div class='notification success clearfix'><p>Thank you <strong>$name</strong>, your message has been submitted to us.</p></div>";
+	echo "<div class='notification success clearfix'><p>Thank you <strong>$name</strong>, your message has been sent to me.</p></div>";
 	echo "</div>";
 	echo "</fieldset>";
 
@@ -100,4 +98,4 @@ if(mail($address, $e_subject, $msg, $headers)) {
 
 	echo 'ERROR!';
 
-}*/
+}
