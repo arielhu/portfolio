@@ -166,10 +166,10 @@ a, a:visited { font-weight: 400; text-decoration: none; }
 
 .parallax.no-parallax { background-size: cover!important; background-attachment: scroll!important; background-position: center!important; }
 
-.parallax-bg1 { background-image: url(../images/parallax-bg1.png); }
-.parallax-bg2 { background-image: url(../images/parallax-bg2.png); }
-.parallax-bg3 { background-image: url(../images/parallax-bg3.png); }
-.parallax-bg4 { background-image: url(../images/parallax-bg4.png); }
+.parallax-bg1 { background-image: url(../images/parallax-bg1.jpeg); }
+.parallax-bg2 { background-image: url(../images/parallax-bg2.jpeg); }
+.parallax-bg3 { background-image: url(../images/parallax-bg3.jpeg); }
+.parallax-bg4 { background-image: url(../images/parallax-bg4.jpeg); }
 
 .title { text-align: center; }
 
